@@ -1,0 +1,25 @@
+
+<head>
+<style>
+h1 {
+  font-family : Arial;
+}
+
+</style>
+</head>
+
+  <center><h1>There are {{ count }} words in your text<h1></center>
+  <center><a href="{%url 'homepage'%}">Start Again</a></center>
+  <center><h1>Your Text:</h1></center>
+  <center>{{ fulltext }}</center>
+  <center><h1>Word Count:</h1></center>
+  <center>{% for word, counttotal in sortedwords%}</center>
+  <center>{{ word }} - {{ counttotal }}</center>
+  <br />
+
+
+
+
+
+
+  {% endfor %}
